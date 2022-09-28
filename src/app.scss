@@ -1,0 +1,25 @@
+.app {
+  height: 100vh;
+}
+//SECTION PART
+.section {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: rgb(255, 238, 0);
+  position: relative; //use position realative to make the top or bottom left right to anything u like
+  top: 70px;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; //this is for firfox to hide the scrollbar
+  &::-webkit-scrollbar {
+    //this is for other browsers to hide the scrollbars
+    display: none;
+  }
+
+  > * {
+    //this means to select each element in the section, portfolio, testi...
+    width: 100vw;
+    height: calc(100vh - 70px);
+    scroll-snap-align: start;
+  }
+}
